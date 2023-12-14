@@ -18,8 +18,6 @@ type Car = {
 
 function FormSearchCar() {
     const [cars, setCars] = useState<Car[]>([]);
-    // const [selectedCar, setSelectedCar] = useState<Car | null>(null);
-const URL_BACKEND = import.meta.env['VITE_BACKEND_URL']
 
 
     

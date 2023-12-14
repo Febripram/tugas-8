@@ -1,6 +1,5 @@
 import { ChangeEvent, FormEvent, useState } from 'react';
 import { Card } from 'react-bootstrap';
-import { httpFetch } from '../../utils/http';
 import { useLocalStorage } from '../../hooks/useLocalStorage';
 const BACKEND_URL = import.meta.env['VITE_BACKEND_URL']
 

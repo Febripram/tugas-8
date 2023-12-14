@@ -12,8 +12,8 @@ import { ContextType, useContext, Context } from 'react'
  
 export default function Login() {
   const navigate = useNavigate()
-  const [_token, setToken] = useLocalStorage('token', {})
-  const {userInfo, saveUserInfo } = useContext(UserInfoContext) as ContextType<Context<TUserInfoContext>>
+  const [,setToken] = useLocalStorage('token', {})
+  const {saveUserInfo } = useContext(UserInfoContext) as ContextType<Context<TUserInfoContext>>
 
   // eslint-disable-next-line
 
@@ -30,7 +30,7 @@ export default function Login() {
           password: e.currentTarget.password.value,
         }),        
       })
-      // @ts-ignore
+      // @ts-expect-error type
       setToken(response.token)
       navigate('/dashboard')
     } catch (error) {
