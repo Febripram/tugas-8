@@ -13,7 +13,7 @@ jobs:
       - name: Tests
         run: npm test
       - name: Build
-        run: npm builds
+        run: npm build
       - name: Deploy to Netlify
         uses: nwtgck/actions-netlify@v2.0
         with:
