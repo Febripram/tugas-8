@@ -8,8 +8,12 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v3
-      - name: Test
-        run: npm install && npm test
+      - name: Install
+        run: npm install
+      - name: Tests
+        run: npm test
+      - name: Build
+        run: npm builds
       - name: Deploy to Netlify
         uses: nwtgck/actions-netlify@v2.0
         with:
